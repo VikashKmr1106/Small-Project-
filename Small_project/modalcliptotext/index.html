@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="https://kit.fontawesome.com/eb64514b22.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<button type="button" class="share-btn">
+		<i class="fa-solid fa-square-arrow-up-right"></i>
+	</button>
+
+	<dialog class="copy-link-dialog">
+		<form action="#">
+			<header>
+				<h2>Share the link</h2>
+				<button type="button" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+			</header>
+			<div class="dialog-link-dialog__content">
+				<div class="copy-link-wrapper">
+					<input type="text" id="copy-link-input" value='https://example.com/share-this' />
+					<button type="button" class="copy-btn">
+						<i class="fa-regular fa-copy"></i>
+						<span id="copy-text">Copy Link</span>
+					</button>
+				</div>
+			</div>
+		</form>
+	</dialog>
+
+	
+
+	
+	<script src="script.js"></script>
+</body>
+</html>

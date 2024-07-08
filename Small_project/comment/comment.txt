@@ -1,0 +1,173 @@
+// function moveLabel() {
+//     if (input.value || input === document.activeElement) {
+//         label.style.translate = "0 -60%;";
+// 				label.style.color = "#fff";
+// 			label.style.background = "var(--primary)";
+// 			label.style.border = '1px solid var(--grey-border)';
+//     } else {
+//         label.style.translate = "0 -50%";
+// 				label.style.color = "#888888";
+// 				label.style.background = "none";
+// 				label.style.border = 'none';
+//     }
+// }
+
+// newcomment_form.addEventListener('submit', (event) => {
+// 	event.preventDefault();
+// 	event.stopPropagation();
+// 	let newcommentText = newcommentTextarea.value.trim();
+
+// 	if (newcommentText) {
+// 		// Create a new paragraph element
+// 		const newCommentElement = document.createElement('p');
+
+// 		newCommentElement.textContent = newcommentText;
+
+// 		discussion_comments.appendChild(newCommentElement);
+
+// 		// Clear the textarea
+// 		newcommentTextarea.style.height = '3rem';
+// 		newcommentTextarea.value = '';
+// 	}
+// });
+
+// const newcomment_form = document.querySelector('#newcomment_form');
+// const newcommentTextarea = document.querySelector('#textarea');
+// const discussion_comments = document.querySelector('.discussion_comments');
+// const reset_Btn = document.querySelector('#reset_Btn');
+
+// // Function to calculate time since a given date
+// const timeSince = (date) => {
+//     const seconds = Math.floor((new Date() - date) / 1000);
+    
+//     if (seconds < 60) {
+//         return 'just now';
+//     } else if (seconds < 3600) {
+//         return Math.floor(seconds / 60) + ' minutes ago';
+//     } else if (seconds < 86400) {
+//         return Math.floor(seconds / 3600) + ' hours ago';
+//     } else if (seconds < 2592000) {
+//         return Math.floor(seconds / 86400) + ' days ago';
+//     } else if (seconds < 31536000) {
+//         return Math.floor(seconds / 2592000) + ' months ago';
+//     } else {
+//         return Math.floor(seconds / 31536000) + ' years ago';
+//     }
+// };
+
+// // Function to update time for each comment
+// const updateTimeForComments = () => {
+//     const comments = discussion_comments.querySelectorAll('p');
+    
+//     comments.forEach(comment => {
+//         const commentDate = new Date(comment.getAttribute('data-time'));
+//         comment.textContent = comment.getAttribute('data-text') + ' - ' + timeSince(commentDate);
+//     });
+// };
+
+// // Update time initially
+// updateTimeForComments();
+
+// // Update time every minute
+// setInterval(updateTimeForComments, 60000);
+
+// newcomment_form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     event.stopPropagation();
+//     let newcommentText = newcommentTextarea.value.trim();
+
+//     if (newcommentText) {
+//         const newCommentElement = document.createElement('p');
+//         const currentDate = new Date();
+
+//         // Set data-time attribute to store the time the comment was posted
+//         newCommentElement.setAttribute('data-time', currentDate);
+        
+//         // Set data-text attribute to store the comment text
+//         newCommentElement.setAttribute('data-text', newcommentText);
+
+//         newCommentElement.textContent = newcommentText + ' - just now'; // Initial time set to 'just now'
+//         discussion_comments.appendChild(newCommentElement);
+
+//         newcommentTextarea.style.height = '3rem';
+//         newcommentTextarea.value = '';
+//     }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+// isme second count hote hue dkeh rha h 
+
+// const timeSince = (date) => {
+// 	const seconds = Math.floor((new Date() - date) / 1000);
+// 	let interval = seconds / 31536000;
+
+// 	if(interval > 1){
+// 			return Math.floor(interval) + ' years ago';
+// 	}
+// 	interval = seconds / 2592000;
+// 	if(interval > 1){
+// 			return Math.floor(interval) + ' months ago';
+// 	}
+// 	interval = seconds / 86400;
+// 	if(interval > 1){
+// 			return Math.floor(interval) + ' days ago';
+// 	}
+// 	interval = seconds / 3600;
+// 	if(interval > 1){
+// 			return Math.floor(interval) + ' hours ago';
+// 	}
+// 	interval = seconds / 60;
+// 	if(interval > 1){
+// 			return Math.floor(interval) + ' minutes ago';
+// 	}
+// 	if(seconds < 10){
+// 			return 'just now';
+// 	}
+// 	return Math.floor(seconds) + ' seconds ago';
+// };
+
+// // Function to update the time dynamically
+// const updateTime = (dateElement) => {
+// 	const currentDate = new Date();
+// 	const timeSinceText = timeSince(dateElement.date);
+// 	dateElement.element.textContent = dateElement.text + ' - ' + timeSinceText;
+// };
+
+// newcomment_form.addEventListener('submit', (event) => {
+// 	event.preventDefault();
+// 	event.stopPropagation();
+// 	let newcommentText = newcommentTextarea.value.trim();
+
+// 	if (newcommentText) {
+// 			// Create a new paragraph element
+// 			const newCommentElement = document.createElement('p');
+
+// 			// Create a new date object for the current time
+// 			const currentDate = new Date();
+
+// 			// Set the text content of the paragraph to include the comment text and the time since it was posted
+// 			newCommentElement.textContent = newcommentText + ' - just now'; // Initially set to just now
+
+// 			// Append the new paragraph element to the discussion_comments
+// 			discussion_comments.appendChild(newCommentElement);
+
+// 			// Clear the textarea
+// 			newcommentTextarea.style.height = '3rem';
+// 			newcommentTextarea.value = '';
+
+// 			// Schedule the time update every second
+// 			const dateElement = { element: newCommentElement, date: currentDate, text: newcommentText };
+// 			setInterval(() => updateTime(dateElement), 1000);
+// 	}
+// });

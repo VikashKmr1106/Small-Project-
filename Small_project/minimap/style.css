@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter';
+}
+html,body{
+	overscroll-behavior: none;
+}
+section{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	/* padding: 2rem; */
+	/* height: 100vh; */
+}
+.container{
+	width: 60%;
+	max-width: 600px;
+}
+div.img{
+	padding-top: 1rem;
+	width: 100%;
+	/* height: 64%; */
+}
+div.img img{
+	width: 100%;
+	/* height: 64%; */
+	object-fit: cover;
+	border-radius: 10px;
+}
+h1{
+	font-size: clamp(20px, 3.2vw, 36px);
+}
+p{
+	font-size: clamp(16px, 1.2vw, 20px);
+}
+
+/* minimap css */
+.minimap_container{
+position: fixed;
+top: 10px;
+left: 10px;
+min-width: 20px;
+z-index: 100;
+}
+.minimap_size{
+	position: relative;
+	z-index: 5;
+	border: 2px solid #fff;
+}
+.minimap_viewer{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	transform-origin: 0 0;
+	z-index: 100;
+	border: 1px solid #00000097;
+}
+.minimap_content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	transform-origin: 0 0;
+	border: 1px solid #fff;
+}

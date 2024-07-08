@@ -1,0 +1,204 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: 'Poppins';
+}
+:root{
+	--background : #F8F8FF;
+	--white : #fff;
+	--grey-light : #FAFBFC;
+	--grey-border : #ECF1F4;
+	--grey-dark : #AEB7C2;
+	--primary : #864AF9;
+  --box-shadow : rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+	body{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100vh;
+		font-size: 16px;
+		background: var(--background);
+	}
+
+	.avatar{
+		border-radius: 50%;
+		width: 2.5rem;
+		height: 2.5rem;
+		object-fit: cover;
+	}
+	.discussion{
+		background: var(--white);
+		min-width: 24rem;
+    min-height: 25rem;
+    max-width: 470px;
+		height: 400px;
+		overflow: hidden;
+		padding: 20px;
+		user-select: none;
+		border-radius: 10px;
+		box-shadow: var(--box-shadow);
+	}
+	.discussion_header{
+		display: flex;
+		align-items: flex-start;
+		/* justify-content: space-between; */
+		gap: 0.5rem;
+	}
+	#newcomment_form , .textarea{
+		width: 100%;
+	}
+	.textarea{
+		background-color: var(--grey-light);
+		border-color: var(--grey-border);
+		padding: 10px;
+		border-radius: 10px;
+		resize: none;
+		overflow: hidden;
+		height: 3rem;
+
+	}
+	.textarea:focus{
+   outline: none;
+	 height: 5rem;
+	 border-color: var(--primary);
+	}
+	.newcomment_toolbar{
+		display: flex;
+		align-items: flex-end;
+		justify-content: end;
+		gap: 12px;
+	}
+	.newcomment_toolbar button{
+	  outline: none;
+		padding: 10px;
+		margin-top:6px;
+		border: none;
+		background: var(--primary);
+		color: var(--white);
+		/* font-size: 16px; */
+		font-weight: normal;
+		border-radius:10px;
+		cursor: pointer;
+	}
+	.newcomment_toolbar button#reset_Btn{
+		background: var(--grey-light) !important;
+		color: #000;
+		border: 1px solid var(--grey-border);
+	}
+
+
+	.md-textbox{
+    position: relative;
+  }
+.md-textbox :is(label){
+    position:absolute;
+    top: 50%;
+    translate: 0 -50%;
+    pointer-events: none;
+    color: #888888;
+    transition: 0.8s;
+		font-size: 12px;
+}
+
+.md-textbox > label{
+    left: 10px;
+    translate: 0 -60%;
+    padding: 4px 8px;
+		font-size: 12px;
+}
+.md-textbox > textarea{
+    overflow: hidden;
+    text-overflow: ellipsis;
+		padding: 12px;
+    border: 2px solid #888888;
+    background: transparent;
+    border-radius: 5px;
+
+}
+
+/* .md-textbox > :is(textarea:focus, .has-value) ~ label{
+	background-color: var(--primary);
+	border: 1px solid var(--grey-border);
+   color: #fff;
+	 border-radius: 20px;
+   translate: 0 -52px;
+} */
+.md-textbox > textarea:focus ~ label,
+.md-textbox > .has-value ~ label {
+    background-color: var(--primary);
+    border: 1px solid var(--grey-border);
+    color: #fff;
+    border-radius: 20px;
+    transform: translateY(-52px); 
+}
+
+/* .md-textbox > textarea:focus ~ .avatar{
+	border: 2px solid var(--primary);
+		padding: 3px;
+} */
+
+.discussion_comments{
+	margin-top: 10px;
+	/* box-shadow: var(--box-shadow); */
+	padding: 0 10px 0 0;
+	border-radius: 10px;
+	width: 450px;
+	height: 259px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	text-align: center;
+}
+.discussion_comments::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+.discussion_comments::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	background-color: var(--grey-border);
+}
+ 
+.discussion_comments::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+	border-radius: 20px;
+}
+.discuss_container{
+	display: flex;
+	gap: 10px;
+	border-bottom: 1px solid var(--grey-border);
+  padding-bottom: 10px;
+}
+.discuss_container:not(:first-child){
+	padding-top:10px;
+}
+.user_name{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.user_name h3{
+	font-weight: 500;
+	font-size: 15px;
+}
+.user_name .comment_time{
+		color: var(--grey-dark);
+		font-size: 12px;
+}
+.comment_box p{
+	text-align: left;
+	font-size: 12px;
+}
+.username_comment_maindiv{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.profile_imgg img{
+  padding : 3px;
+	border : 2px solid var(--primary);
+}

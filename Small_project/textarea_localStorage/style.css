@@ -1,0 +1,30 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+
+}
+.container{
+	width: 600px;
+}
+.container textarea{
+	width: 100%;
+	height: 100%;
+}
+.btn button{
+	padding: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	border-radius: 5px;
+	background: none;
+	
+}
